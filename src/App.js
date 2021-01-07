@@ -18,6 +18,7 @@ const Button = styled.button`
   padding: 1rem 3rem;
   font-size:2rem;
   border: 2px solid black;
+  border-radius: 0.3rem;
 `
 
 function App () {
