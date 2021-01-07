@@ -20,8 +20,16 @@ const Button = styled.button`
 
 function App () {
 
-  const fetchAPI = () => {
-    console.log('getting data...')
+  // const fetchAPI = () => {
+  //   const api = fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes')
+  //   const quote = api.then(res => res.json())
+  //   quote.then(result => console.log(result))
+  // }
+
+  const fetchAPI = async () => {
+    const api = await fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes')
+    const quote = await api.json()
+    console.log(quote[0])
   }
 
   return (
