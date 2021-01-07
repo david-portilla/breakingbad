@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import styled from '@emotion/styled'
 import Phrase from './components/Phrase'
 
@@ -19,6 +19,12 @@ const Button = styled.button`
   font-size:2rem;
   border: 2px solid black;
   border-radius: 0.3rem;
+  transition: background-size .025s linear;
+
+  :hover {
+    cursor: pointer;
+    background-size: 400px;
+  }
 `
 
 function App () {
@@ -29,6 +35,10 @@ function App () {
     const quote = await api.json()
     setPhrase(quote[0])
   }
+
+  useEffect(() => {
+    fetchAPI()
+  }, [])
 
   return (
     <Wrapper>

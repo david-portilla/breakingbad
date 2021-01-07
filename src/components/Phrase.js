@@ -38,7 +38,6 @@ const WrapperPhrase = styled.div`
 
 const Phrase = ({phrase}) => {
   return (
-
     <>
       {phrase.quote ?
         <WrapperPhrase>
@@ -48,7 +47,6 @@ const Phrase = ({phrase}) => {
         : null
       }
     </>
-
   )
 }
 
